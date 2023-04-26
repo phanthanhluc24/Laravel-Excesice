@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 
 class HelloController extends Controller
@@ -11,29 +11,45 @@ class HelloController extends Controller
         return view('login');
     }
 
+    public function Api(){
+        return view('test');
+    }
+
     public function display(Request $request)
     {
+        
         $number1 = $request->number1;
         $number2 = $request->number2;
         $calulation = $request->caculation;
 
         switch ($calulation) {
             case '+':
-                return $number1 + $number2;
+                $result= $number1 + $number2;
                 break;
             case '-':
-                return $number1 - $number2;
+                $result= $number1 - $number2;
                 break;
             case '*':
-                return $number1 * $number2;
+                $result= $number1 * $number2;
                 break;
             case '/':
-                return $number1 / $number2;
+                $result= $number1 / $number2;
                 break;
             default:
-               return "<script>alert('Vui lòng nhập phương thức tính toán')</script>";
+               $result= "<script>alert('Vui lòng nhập phương thức tính toán')</script>";
                 break;
         }
+        return view('login',['result'=>$result]);
         
+    }
+
+    public function getAPICovid()
+    {
+        $respon=Http::get('https://api.covid19api.com/summary');
+
+
+        $data=$respon->json();
+
+        return view('test',['data'=>$data]);
     }
 }

@@ -1,7 +1,16 @@
-{{-- <h2>{{$title}}</h2> 
-<h1>{{$name}}</h1> --}}
-<?PHP
-    foreach ($student as $key=>$value) {
-        echo $value."<br>"; 
-    }
-?>
+<table>
+    <thead>
+        <tr>
+            <th>Quốc gia</th>
+            <th>Số lượng</th>
+            
+        </tr>
+        @foreach ($data['Countries'] as $item) 
+        <tr>
+            
+            <td>{{$item['Country']}} </td>
+            <td>{{$item['TotalConfirmed']}}</td>
+        </tr>
+        @endforeach
+    </thead>
+</table>
