@@ -1,0 +1,65 @@
+.container__header {
+  display: flex;
+  width: 1600px;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: orange;
+}
+.container__header .icon {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.container__header .icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-left: 40px;
+}
+.container__header .content__brand {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 300px;
+}
+
+.container__slide .container__grid {
+  display: grid;
+  grid-template-columns: 12% 88%;
+  grid-column-gap: -100px;
+}
+.container__slide .container__grid .grid__slide {
+  grid-column: 1/2;
+  background: orange;
+  width: 200px;
+  height: 700px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  margin-top: 100px;
+}
+.container__slide .container__grid .grid__slide .slide_home, .container__slide .container__grid .grid__slide .slide_user, .container__slide .container__grid .grid__slide .slide_product {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: khaki;
+}
+.container__slide .container__grid .grid__slide .slide_home a, .container__slide .container__grid .grid__slide .slide_user a, .container__slide .container__grid .grid__slide .slide_product a {
+  text-decoration: none;
+}
+.container__slide .container__grid .grid__content {
+  grid-column: 2/3;
+  width: 100px;
+  height: 30px;
+  margin-top: 100px;
+  top: 0;
+  left: 12.5%;
+  position: fixed;
+}/*# sourceMappingURL=app.css.map */

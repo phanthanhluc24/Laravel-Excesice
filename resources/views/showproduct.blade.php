@@ -6,9 +6,9 @@
     <div class="row">
         @foreach (session('products') as $product)
             <div class="col-md-3">
-                @if (isset($product['image']))
+                {{-- @if (isset($product['image'])) --}}
                     <img src="{{$product['image']}}" alt="">
-                @endif
+                {{-- @endif --}}
                 @if (isset($product['title']))
                     <h3>{{$product['title']}}</h3>
                 @endif

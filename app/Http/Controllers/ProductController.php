@@ -10,10 +10,9 @@ class ProductController extends Controller
     public function create(){
         return view("login");
     }
-
-
     public function store(Request $request){
         Account::create($request->all());
+        return view('login');
     }
     
 }

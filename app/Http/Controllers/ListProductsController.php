@@ -41,4 +41,6 @@ class ListProductsController extends Controller
 
     return view('showproduct',['products'=>$products]);
    }
+
+   
 }
